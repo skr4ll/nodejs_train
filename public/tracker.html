@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<title>Geldtrack</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<!--<script src="script.js">let FF_FOUC_FIX;</script>-->
+	<script src="/script.js" defer></script> 
+	<!-- Use defer to load the JS after the DOM -->
+</head>
+
+	<body>
+		<h1 id="lol"></h1>
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#about">About</a></li>
+		</ul> 
+		
+		<table id="tbl" border="3">
+			<thead>
+				<tr>
+					<th>Datum</th>
+					<th>Total</th>
+					<th>Pro Tag</th>
+				</tr>
+			</thead>
+			<tbody id="tblBody">
+		  	</tbody>
+		</table>
+	
+	<form id="entry" method="post" action="/submit">
+		
+		<div class="inputDiv">
+		  <label for="date">Datum</label></br>
+		  <input type="date" id="date" name="date">
+		</div>
+		
+		<div class="inputDiv">
+		  <label for="amount">Kontostand</label></br>
+		  <input type="text" id="amount" name="amount" value="">
+		</div>
+	  <input id="submitButton" type="submit" value="Eintragen">
+	
+	</form>
+</br>
+	<div id="errorDiv"></div>
+</br>
+	<div id="amountMissingDiv"></div>	
+	</body>
+
+</html>

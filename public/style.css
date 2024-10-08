@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  } 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  background-color: black;
+  float: left;
+  overflow: auto;
+  border: 3px solid white;
+}
+li a {
+  display: block;
+  padding: 3%;
+  text-decoration: none;
+  color: white;
+  font-size: 80%;
+}
+li a:hover {
+  background-color: grey;
+  color: white;
+}
+input {
+  border: 5px solid green;
+  border-radius: 8px;
+  font-size: 80%;
+  padding: 5%;
+}
+#tbl{
+	float: left;
+	overflow: auto;
+	margin-left: 3%;
+	margin-right: -7%;
+}
+.inputDiv{
+	float: left;
+	margin-right: 5%;
+}
+
+#submitButton{
+	margin-top: 5%;
+	margin-left: 25%;
+	background-color: grey;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 50%;
+	font-weight: bold;
+}
+#submitButton:hover{
+	background-color: green;
+	color: white;
+}
+#errorDiv{
+	font-size: small;
+	color: red;
+	padding-top: 7%;
+	padding-left: 50%;
+}
+#amountMissingDiv{
+	color: rgb(217, 255, 0);
+	padding-top: 3%;
+	padding-left: 30%;	
+}
+#entry{
+	margin-left: 10%;
+	float: left;
+	overflow: auto;
+}
+body{
+	font-family: Cursive;
+	background-color: black;
+	font-size: 150%;
+	color: white;
+}
+th, td{
+	padding: 15px; /* Increases cell padding */
+	text-align: center;
+}
+th{
+	border: 3px solid black; /* Thicker borders for header cells */
+	border-color: white;
+}
+td{
+	border: 1px solid black; /* Normal borders for data cells */
+	border-color: red;
+}
