@@ -51,11 +51,11 @@ window.addEventListener("keydown", (event) => {
             break;
     }
 });
-
+let date = new Date();
+console.log(date);
 // Verarbeitung des Forms
 formEntry.addEventListener("submit", async function(event) {
     event.preventDefault();
-
     const formData = new FormData(this); // Erzeugt ein Objekt, dass die Formvars enthält
     const data = Object.fromEntries(formData.entries()); // Convert to a plain object
     try {
@@ -123,8 +123,7 @@ function setDate() {
     document.getElementById("date").value = formattedDate;
 	
 }
-function leapYear(year)
-{
+function leapYear(year){
   return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 }
 
