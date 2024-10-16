@@ -7,10 +7,9 @@ const db = new sqlite3.Database('./database.db');
 
 //Für statische Dateien z.B .css frontend .js
 app.use(express.static('./public'));
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
-// Route to fetch entries from the SQLite database
 app.get('/entries', (req, res) => {
     const sql = 'SELECT date, amount FROM entries ORDER BY date DESC';
     
@@ -20,9 +19,9 @@ app.get('/entries', (req, res) => {
             return;
         }
         //console.log(rows);
-        const responseData = { data: rows }; // Store the response data
-        //console.log("Response data: %j", responseData); // Log the JSON response
-        res.json(responseData); // Send the response to the client
+        const responseData = { data: rows };
+        //console.log("Response data: %j", responseData);
+        res.json(responseData);
     });
 });
 
@@ -38,7 +37,6 @@ app.post('/submit', (req, res) => {
 	
     db.run(sql, [date, amount], (err) => {
         if (err) {
-            // Check for unique constraint violation
             if (err.code === 'SQLITE_CONSTRAINT') {
                 return res.status(400).json({ message: 'DATUM EXISTIERT BEREITS' });
             }

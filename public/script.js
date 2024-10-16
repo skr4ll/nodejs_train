@@ -57,7 +57,7 @@ console.log(date);
 formEntry.addEventListener("submit", async function(event) {
     event.preventDefault();
     const formData = new FormData(this); // Erzeugt ein Objekt, dass die Formvars enthält
-    const data = Object.fromEntries(formData.entries()); // Convert to a plain object
+    const data = Object.fromEntries(formData.entries()); 
     try {
         const response = await fetch("/submit", {
             method: "POST",
@@ -67,9 +67,8 @@ formEntry.addEventListener("submit", async function(event) {
             body: JSON.stringify(data) // Body des HTTP Requests mit den Formdaten
         });
 
-        // Check if the server responded with an error
         if (!response.ok) {
-            const errorData = await response.json(); // Get error message from server
+            const errorData = await response.json();
             divErrorMessage.innerHTML = errorData.message;
             setTimeout(() => {
                 divErrorMessage.innerHTML = "";
@@ -78,7 +77,7 @@ formEntry.addEventListener("submit", async function(event) {
         }
         loadEntries();
     } catch (error) {
-        console.error("Error submitting form:", error); // Handle network or other errors
+        console.error("Error submitting form:", error);
         alert("An unexpected error occurred. Please try again.");
     }
 });
