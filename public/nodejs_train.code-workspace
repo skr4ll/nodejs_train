@@ -3,10 +3,6 @@
 		{
 			"name": "nodejs_train",
 			"path": ".."
-		},
-		{
-			"name": "BSI-1",
-			"path": "../../../../uni/WS24-25/BSI-1"
 		}
 	],
 	"settings": {}
